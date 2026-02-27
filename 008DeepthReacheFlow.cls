@@ -1,7 +1,7 @@
 public class FiveHopFlow {
 
     public static void a() {
-        
+        p = getName();
         b(p);
     }
 

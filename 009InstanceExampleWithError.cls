@@ -2,10 +2,6 @@ public class InstanceFieldFlow {
 
     public String searchTerm;
 
-    public void setSearchTerm(String input) {
-        searchTerm = input;
-    }
-
     public void runQuery() {
         String soql =
             'SELECT Id FROM Account WHERE Name LIKE \'%' + searchTerm + '%\'';
