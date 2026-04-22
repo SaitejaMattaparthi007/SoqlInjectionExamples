@@ -29,21 +29,21 @@ jobs:
             restore-keys: ${{ runner.os }}-sonar
       - name: Run Codescan On Push
         if: github.event_name == 'push'
-        uses: codescan-io/codescan-scanner-action@2.0
+        uses: codescan-io/codescan-scanner-action@1.6
         with: 
           scanChangedFilesOnly: true
-          organization: severity
-          projectKey: github-actions-sarif
+          organization: severity-verification
+          projectKey: github-actions-sarif1
           codeScanUrl: https://preview.codescan.io/
           login: squ_7087cb118003e07e0db7c964529fa004db5427fc
           generateSarifFile: true
       - name: Run Codescan On PR
         if: github.event_name == 'pull_request'
-        uses: codescan-io/codescan-scanner-action@2.0
+        uses: codescan-io/codescan-scanner-action@1.6
         with: 
           scanChangedFilesOnly: true
-          organization: severity
-          projectKey: github-actions-sarif
+          organization: severity-verification
+          projectKey: github-actions-sarif1
           codeScanUrl: https://preview.codescan.io/
           login: squ_7087cb118003e07e0db7c964529fa004db5427fc
           generateSarifFile: true
